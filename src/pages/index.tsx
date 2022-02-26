@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import * as S from './styled'
+import * as S from '../styles/index/styled'
 
 type props = {
   selected: boolean
@@ -29,25 +29,21 @@ const Home: React.FC = () => {
   }
 
   const shuffleOrder = () => {
-    let colorOrder = Math.floor(Math.random() * 4)
+    const colorOrder = Math.floor(Math.random() * 4)
     setOrder(oldOrder => [...oldOrder, colorOrder])
   }
 
   useEffect(() => {
-    setPlayerTime(() => {
-      return false
-    })
-    for (let i in order) {
-      let elementColor = order[i]
+    setPlayerTime(() => false)
+    for (const i in order) {
+      const elementColor = order[i]
       lightColor(elementColor, Number(i) + 1)
     }
   }, [order])
 
   useEffect(() => {
     if (playerTime) {
-      setShuffletime(() => {
-        return false
-      })
+      setShuffletime(() => false)
     }
   }, [playerTime])
 
@@ -59,12 +55,8 @@ const Home: React.FC = () => {
     setTimeout(() => {
       setSelected([])
       if (number / 500 == order.length) {
-        setPlayerTime(() => {
-          return true
-        })
-        setAlert(() => {
-          return 'Sua vez'
-        })
+        setPlayerTime(() => true)
+        setAlert(() => 'Sua vez')
       }
     }, number)
   }
@@ -81,7 +73,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     if (order.length != 0) {
       let stop = 0
-      for (let i in clickedOrder) {
+      for (const i in clickedOrder) {
         if (clickedOrder[i] != order[i]) {
           stop = 1
           lose()
@@ -91,12 +83,8 @@ const Home: React.FC = () => {
       if (clickedOrder.length === order.length && stop == 0) {
         console.log('Segundo')
         setTimeout(() => {
-          setAlert(() => {
-            return 'Parabéns! Minha vez'
-          })
-          setClickedOrder(() => {
-            return []
-          })
+          setAlert(() => 'Parabéns! Minha vez')
+          setClickedOrder(() => [])
           nextLevel()
         }, 500)
       }
@@ -105,28 +93,23 @@ const Home: React.FC = () => {
 
   const lose = () => {
     console.log('Primeiro')
-    setAlert(() => {
-      return 'Você perdeu :('
-    })
-    setPlayerTime(() => {
-      return false
-    })
-    setShuffletime(() => {
-      return false
-    })
-    setOrder(() => {
-      return []
-    })
+    setAlert(() => 'Você perdeu :(')
+    setPlayerTime(() => false)
+    setShuffletime(() => false)
+    setOrder(() => [])
   }
 
   const createColorElement = (element: number) => {
     if (element === 0) {
       return [true, false, false, false]
-    } else if (element === 1) {
+    }
+    if (element === 1) {
       return [false, true, false, false]
-    } else if (element === 2) {
+    }
+    if (element === 2) {
       return [false, false, true, false]
-    } else if (element === 3) {
+    }
+    if (element === 3) {
       return [false, false, false, true]
     }
   }
