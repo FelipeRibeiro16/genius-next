@@ -43,6 +43,7 @@ export const Blue = styled.div<props>`
   grid-area: blue;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
   background-color: dodgerblue;
   border-bottom-right-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
@@ -81,6 +82,7 @@ export const Red = styled.div<props>`
   grid-area: red;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
   background-color: red;
   border-top-right-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
@@ -118,6 +120,7 @@ export const Yellow = styled.div<props>`
   grid-area: yellow;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
   background-color: yellow;
   border-bottom-left-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
@@ -155,6 +158,7 @@ export const Green = styled.div<props>`
   grid-area: green;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
   background-color: mediumseagreen;
   border-top-left-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
@@ -199,6 +203,7 @@ export const Menu = styled.div`
 export const Button = styled.div`
   display: flex;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
   user-select: none;
   align-items: center;
   justify-content: center;
