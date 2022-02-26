@@ -12,6 +12,12 @@ export const GameContainer = styled.div`
   background-color: black;
   justify-content: center;
   align-items: center;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 `
 
 export const Genius = styled.div`
@@ -20,7 +26,7 @@ export const Genius = styled.div`
     'green red'
     'yellow blue';
   grid-gap: 1.5%;
-  border: 1px solid white;
+  border: 1px solid black;
   background-color: black;
   border-radius: 100%;
   margin-top: 2%;
@@ -77,8 +83,8 @@ export const Red = styled.div<props>`
   border-top-right-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
   transition: opacity 100ms linear;
-  border: lightpink 0.25em solid;
-  box-shadow: inset 0 0 0.5em 0 lightpink, 0 0 0.5em 0 lightpink;
+  border: darkred 0.25em solid;
+  box-shadow: inset 0 0 0.5em 0 maroon, 0 0 0.5em 0 maroon;
   position: relative;
   &:before {
     content: '';
@@ -100,7 +106,7 @@ export const Red = styled.div<props>`
     left: 0;
     width: 0;
     height: 0;
-    box-shadow: 0 0 2em 0.5em lightpink;
+    box-shadow: 0 0 2em 0.5em maroon;
     opacity: ${props => (props.selected ? 1 : 0)};
     transition: opacity 100ms linear;
   }
@@ -149,8 +155,8 @@ export const Green = styled.div<props>`
   border-top-left-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
   transition: opacity 100ms linear;
-  border: honeydew 0.25em solid;
-  box-shadow: inset 0 0 0.5em 0 honeydew, 0 0 0.5em 0 honeydew;
+  border: darkgreen 0.25em solid;
+  box-shadow: inset 0 0 0.5em 0 darkgreen, 0 0 0.5em 0 darkgreen;
   position: relative;
   &:before {
     content: '';
@@ -172,7 +178,7 @@ export const Green = styled.div<props>`
     left: 0;
     width: 0;
     height: 0;
-    box-shadow: 0 0 2em 0.5em honeydew;
+    box-shadow: 0 0 2em 0.5em darkgreen;
     opacity: ${props => (props.selected ? 1 : 0)};
     transition: opacity 100ms linear;
   }
