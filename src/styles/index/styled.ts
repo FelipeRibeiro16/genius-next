@@ -32,9 +32,9 @@ export const Genius = styled.div`
   margin-top: 2%;
   width: 40%;
   height: 80%;
-  @media (max-width: 800px) {
+  @media (max-width: 727px) {
     position: relative;
-    width: 60%;
+    width: 90%;
     height: 60%;
   }
 `
