@@ -15,7 +15,7 @@ export const GameContainer = styled.div`
   @media (max-width: 800px) {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
 `
@@ -42,6 +42,7 @@ export const Genius = styled.div`
 export const Blue = styled.div<props>`
   grid-area: blue;
   cursor: pointer;
+  user-select: none;
   background-color: dodgerblue;
   border-bottom-right-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
@@ -79,6 +80,7 @@ export const Blue = styled.div<props>`
 export const Red = styled.div<props>`
   grid-area: red;
   cursor: pointer;
+  user-select: none;
   background-color: red;
   border-top-right-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
@@ -115,6 +117,7 @@ export const Red = styled.div<props>`
 export const Yellow = styled.div<props>`
   grid-area: yellow;
   cursor: pointer;
+  user-select: none;
   background-color: yellow;
   border-bottom-left-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
@@ -151,6 +154,7 @@ export const Yellow = styled.div<props>`
 export const Green = styled.div<props>`
   grid-area: green;
   cursor: pointer;
+  user-select: none;
   background-color: mediumseagreen;
   border-top-left-radius: 100%;
   opacity: ${props => (props.selected ? 1 : 0.5)};
