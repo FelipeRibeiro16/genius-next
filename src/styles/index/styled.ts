@@ -28,8 +28,8 @@ export const Genius = styled.div`
   height: 80%;
   @media (max-width: 800px) {
     position: relative;
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
   }
 `
 
