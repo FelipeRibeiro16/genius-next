@@ -26,6 +26,11 @@ export const Genius = styled.div`
   margin-top: 2%;
   width: 40%;
   height: 80%;
+  @media (max-width: 800px) {
+    position: relative;
+    width: 80%;
+    height: 80%;
+  }
 `
 
 export const Blue = styled.div<props>`
@@ -175,7 +180,7 @@ export const Green = styled.div<props>`
 export const Menu = styled.div`
   display: flex;
   padding: 1%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: black;
   width: 100vw;
@@ -196,7 +201,6 @@ export const Score = styled.span`
   color: white;
   user-select: none;
   padding: 5px;
-  margin: 5px;
 `
 
 export const Alert = styled.span`
@@ -204,5 +208,4 @@ export const Alert = styled.span`
   color: white;
   user-select: none;
   padding: 5px;
-  margin: 5px;
 `
